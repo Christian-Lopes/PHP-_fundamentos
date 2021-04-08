@@ -1,6 +1,7 @@
 <?php
 
-    function cursos() {
+    function cursos() :array
+    {
         return [
             "PHP" => [
                 "nome_curso" => "PHP fundamentos",

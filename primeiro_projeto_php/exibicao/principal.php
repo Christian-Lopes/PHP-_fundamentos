@@ -16,44 +16,33 @@
                 <a class="navbar-brand" href="#">PHP fundamentos</a>
             </div>
         </nav>
-        <?= var_dump(cursos()) ?>
-
         <div>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col"></th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Nome curso</th>
+                        <th scope="col">Carga Horária</th>
+                        <th scope="col">Versão Ferramenta</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    
+                    <?php foreach(cursos() as $curso) : ?>
+                        
+                        <?php if(!$curso["status"]){
+                            continue;
+                        } ?>
+                        <tr>
+                            <td><?= $curso["nome_curso"] ?></td>
+                            <td><?= formatarCargaHoraria($curso["carga_horaria"])?></td>
+                            <td><?= $curso["versao_ferramenta"] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    
                 </tbody>
             </table>
         </div>
 
-
-        <!-- Optional JavaScript; choose one of the two! -->
-
-        <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
