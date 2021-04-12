@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f32e55f2181bc0da860de6d16437896a62de38bf',
+    'reference' => '0b709bfd2f1c9a6f2909ade358af41b52f24403e',
     'name' => 'chris/notification',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f32e55f2181bc0da860de6d16437896a62de38bf',
+      'reference' => '0b709bfd2f1c9a6f2909ade358af41b52f24403e',
     ),
     'phpmailer/phpmailer' => 
     array (
